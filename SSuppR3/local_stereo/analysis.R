@@ -7,7 +7,7 @@
 library(ggplot2)
 #library(ggpmisc)
 
-files <- list.files('SSuppR3/local/data',full.names=T)
+files <- list.files('local_stereo/data',full.names=T)
 f <- length(files)
 
 si <- gsub(".*(..)DATE.*","\\1", files)
