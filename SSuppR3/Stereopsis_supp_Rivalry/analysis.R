@@ -7,7 +7,7 @@
 library(ggplot2)
 library(tidyr)
 
-files <- list.files('Stereopsis_supp_Rivalry/data',full.names=T)
+files <- list.files('SSuppR3/Stereopsis_supp_Rivalry/data',full.names=T)
 f <- length(files)
 
 si <- gsub(".*(..)DATE.*","\\1", files)

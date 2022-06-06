@@ -3,11 +3,11 @@
 # Created by: Mac1
 # Created on: 2020/08/05
 # List up files
-
+0
 library(ggplot2)
 #library(ggpmisc)
 
-files <- list.files('local_stereo/data',full.names=T)
+files <- list.files('SSuppR3/local_stereo/data',full.names=T)
 f <- length(files)
 
 si <- gsub(".*(..)DATE.*","\\1", files)

@@ -19,7 +19,7 @@ import display_info
 rept = 6
 cal = -45
 exclude_mousePointer = False
-test_eye = -1
+test_eye = 1
 # ------------------------------------------------------------------------
 
 # Get display informations
