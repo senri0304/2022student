@@ -4,7 +4,7 @@
 # Created on: 2020/08/05
 # List up files
 
-files <- list.files('pre_DMI/data',full.names=T)
+files <- list.files('SSuppR3/pre_DMI/data',full.names=T)
 f <- length(files)
 
 si <- gsub(".*(..)DATE.*","\\1", files)
