@@ -4,7 +4,7 @@
 # Created on: 2020/08/05
 # List up files
 
-files <- list.files('SSuppR3/pre_DMI/data',full.names=T)
+files <- list.files('pre_DMI/data',full.names=T)
 f <- length(files)
 
 si <- gsub(".*(..)DATE.*","\\1", files)
@@ -27,5 +27,11 @@ for (i in 2:f) {
 
 library(ggplot2)
 
-g <- ggplot(temp2, aes(sub, cdt)) + geom_point() + stat_summary(fun=mean, geom="point", colour="red")
+dat <- subset(temp2, sn!=c(4, 5))
+dat <- subset(dat, sn!=c(4, 5))
+dat <- subset(dat, sn!=c(4, 5))
+g <- ggplot(dat, aes(sub, cdt)) + 
+  geom_point(alpha=0.4) + stat_summary(fun=mean, geom="point", color='red') + 
+  geom_hline(yintercept = mean(dat$cdt), size = 0.5, linetype = 1, color = "#5B9BD5") +
+  xlab('observer') + ylab('Cumlative disappearance time') + theme(axis.title=element_text(size=14))
 g
